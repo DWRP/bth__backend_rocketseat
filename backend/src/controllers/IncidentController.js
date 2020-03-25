@@ -3,11 +3,24 @@ const conn = require('../database/conn');
 module.exports = {
     
     async index(req,res){
-        const cases = await conn('incidents').select('*');
+        const {page = 1} = req.params;
+        
+        const count = await conn('incidents').count();
 
+        const cases = await conn('incidents')
+            .join('ongs','ongs.id','=','incidents.ong_id')
+            .limit(5)
+            .offset((page-1)*5)
+            .select(['incidents.*',
+                    'ongs.name',
+                    'ongs.email',
+                    'ongs.whatsapp',
+                    'ongs.city',
+                    'ongs.uf']);
+        
+        res.header("X-Total-Count",count['count(*)']);
         return res.send(cases);
     },
-
     async store(req,res){
 
         const {title,description,value} = req.body;
@@ -41,6 +54,5 @@ module.exports = {
             .delete();
 
         return res.status(204).send();
-    },
-
+    }
 }

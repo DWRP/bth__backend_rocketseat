@@ -1,21 +1,24 @@
 const express = require('express');
 
+const SessionController = require('./controllers/SessionController');
 const OngController = require('./controllers/OngController');
-
 const IncidentController = require('./controllers/IncidentController');
+const ProfileController = require('./controllers/ProfileController');
 
 const router = express.Router();
 
 router.get("/",(req,res)=>res.send({"welcome":"in BTH_API"}));
 
-router.get("/ongs",OngController.index);
+router.post("/session",SessionController.store);
 
+router.get("/ongs",OngController.index);
 router.post("/ongs",OngController.store);
 
-router.get("/incident",IncidentController.index);
+router.get("/incidents",IncidentController.index);
+router.post("/incidents",IncidentController.store);
+router.delete("/incidents/:id",IncidentController.delete);
 
-router.post("/incident",IncidentController.store);
+router.get("/profile",ProfileController.index);
 
-router.delete("/incident/:id",IncidentController.delete);
 
 module.exports = router;
