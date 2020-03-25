@@ -24,8 +24,8 @@ Usage:
     But, i am use yarn to make this.
 
  - First : Go to backend in terminal (cd backend)
- - Second: Run yarn add/install. 
-   Run yarn dev or yarn start to execulte
+ - Second: Run yarn install. 
+   Run yarn dev or yarn start to execute
  - Third: Open new Terminal and go to others folders
  - Fourth: Run others projects (frontend/mobile)
 
