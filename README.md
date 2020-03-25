@@ -29,6 +29,9 @@ Usage:
  - Third: Open new Terminal and go to others folders
  - Fourth: Run others projects (frontend/mobile)
 
+    for frontend, make:
+        cd frontend
+        yarn install
 Sucess!
 
 
