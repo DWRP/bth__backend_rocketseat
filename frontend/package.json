@@ -1,0 +1,13 @@
+{
+  "name": "bth",
+  "version": "1.0.0",
+  "description": "frontend in be the hero from rocketseat",
+  "main": "index.js",
+  "repository": "https://github.com/DWRP/bth_rocketseat",
+  "author": "Douglas W.",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "create-react-app": "^3.4.1"
+  }
+}
