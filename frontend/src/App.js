@@ -1,8 +1,12 @@
 import React from 'react';
 
+import Header from './pages/Header';
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Header>
+        Semana Oministack.11
+    </Header>
   );
 }
 
