@@ -1,15 +1,13 @@
 import React from 'react';
-import {MdChevronRight,MdRefresh} from 'react-icons/md';
+import {MdAdd} from 'react-icons/md';
 
-import heroesImage from '../../assets/heroes.png';
 import logoImage from '../../assets/logo.svg';
 
 import './style.css';
 
-export default function Logon(){
+export default function Register(){
     return(
         <div className="logon-container">
-            <img src={heroesImage} alt='heroes image' />
             
             <section className="form">
                 
@@ -21,17 +19,10 @@ export default function Logon(){
                     <input type="password" name='pass' placeholder='Sua Senha'/>
                     <button type="submit" className='button'>Entrar</button>
                     
-                    <div>
-                        <a href="http://">
-                            <MdRefresh size={16} color={'#8C20E0'} />
-                            Esqueci a senha
-                        </a>
-
-                        <a href="http://">
-                            <MdChevronRight size={16} color={'#8C20E0'} />
-                            Não tenho cadastro
-                        </a>
-                    </div>
+                    <a href="http://">
+                        <MdAdd size={16} color={'#8C20E0'} />
+                        Não tenho cadastro
+                    </a>
                 </form>
             
             </section>

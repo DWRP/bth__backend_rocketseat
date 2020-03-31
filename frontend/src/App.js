@@ -2,15 +2,11 @@ import React from 'react';
 
 import './global.css';
 
-import Logon from './pages/Logon/';
-
-
+import Logon from './routes';
 
 function App() {
   return (
-      <Logon>
-
-      </Logon>
+      <Logon />
   );
 }
 
